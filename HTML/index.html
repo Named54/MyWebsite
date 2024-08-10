@@ -1,15 +1,75 @@
-<html>
-    <h1>
-        Hey Boy
-    </h1>
-    <body>
-        <h2>it´s a me </h2>
-        <p>
-            im ben
-        </p>
-        <h2>it´s a me </h2>
-        <p>
-            yes 123
-        </p>
-    </body>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spieleliste</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            color: #fff;
+            background-color: #1a1a1a;
+        }
+        #sidebar {
+            width: 200px;
+            padding: 20px;
+            background-color: #2a2a2a;
+        }
+        #main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        #search-bar {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #3a3a3a;
+            border: none;
+            color: #fff;
+        }
+        #game-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .game-card {
+            background-color: #3a3a3a;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <h2>Kategorien</h2>
+        <ul>
+            <li>Spiele</li>
+            <li>Serien</li>
+            <li>Filme</li>
+        </ul>
+        <h2>Favoriten</h2>
+        <ul>
+            <li>Meine Liste</li>
+            <li>Zuletzt angesehen</li>
+        </ul>
+    </div>
+    <div id="main-content">
+        <input type="text" id="search-bar" placeholder="Suchen...">
+        <div id="game-list"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
 </html>
